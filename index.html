@@ -37,6 +37,7 @@
       <article>
         <img src="" alt="" class="picture" />
         <h3></h3>
+        <p> <b>All:</b> <span class="all chosen"></span></p>
         <p> <b>Genre:</b> <span class="genre"></span></p>
         <p> <b>Artist: </b> <span class="artist"></span></p>
         <p> <b>Price: </b> <span class="price"></span></p>
@@ -79,7 +80,7 @@
       function start() {
         const filterButtons = document.querySelectorAll("nav button");
         filterButtons.forEach((button) =>
-          button.addEventListener("click", filterVinyls)
+          button.addEventListener("click", vinyls)
         );
         getData();
       }
@@ -98,7 +99,7 @@
         const respons = await fetch(url, options);
         //Her piller vi vores isolerede json data ud
         const json = await respons.json();
-        vinyls = json;
+        restDB = json;
         show(json);
       }
 
@@ -106,13 +107,13 @@
       const main = document.querySelector("main");
       const template = document.querySelector("template");
       const header = document.querySelector("h2");
-      const md = "-md.jpg";
+
 
       //FUNCTION VIS (med en array med en forEach (loop-syntax))
       function show(json) {
         console.log(json);
         main.textContent = "";
-        vinyls.forEach((vinyl) => {
+        restDB.forEach((vinyl) => {
           console.log("Genre", vinyl.genre);
 
           if (filter == vinyl.genre || filter == "all") {
