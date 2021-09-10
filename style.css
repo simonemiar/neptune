@@ -25,11 +25,7 @@ h2,
 footer {
   color: black;
 }
-.stjerne {
-  font-size: 7rem;
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-}
+
 body {
   max-width: 1000px;
   margin: 0 auto;
