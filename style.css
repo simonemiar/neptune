@@ -7,8 +7,11 @@ h2 {
   display: flex;
   justify-content: center;
 }
+
 h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: eurostile-extended, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 50px;
   margin-bottom: 7rem;
   color: black;
@@ -17,10 +20,18 @@ h1 {
 h2,
 h3,
 h4,
-p,
 footer {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+p {
+  font-family: roboto, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 h2,
 footer {
   color: black;
