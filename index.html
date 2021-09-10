@@ -4,7 +4,145 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>nepTune</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body></body>
+
+  <body>
+    <!-- OVERSKRIFTER -->
+    <h1>nepTune</h1>
+    <h2>All vinyls</h2>
+    <section></section>
+
+    <!-- KNAPPER -->
+      <nav>
+        <button data-genre="all" class="chosen">All vinyls</button>
+        <button data-genre="indieRock">Indie Rock</button>
+        <button data-genre="pop">Pop</button>
+        <button data-genre="hiphop">Hip Hop</button>
+        <button data-genre="electronic">Electronic</button>
+        <button data-genre="jazz">Jazz</button>
+        <button data-genre="country">Country</button>
+
+      </nav>
+
+    <!-- TOMT MAIN TAF (indhold bliver puttet ind senere) -->
+    <main></main>
+
+    <!-- POP UP / SINGLE VIEW -->
+    <section id="popup">
+      <div id="close">&#x2715</div>
+      <article>
+        <img src="" alt="" class="picture" />
+        <h3></h3>
+        <p> <b>Genre:</b> <span class="genre"></span></p>
+        <p> <b>Artist: </b> <span class="artist"></span></p>
+        <p> <b>Price: </b> <span class="price"></span></p>
+        <p> <b>Title: </b> <span class="title"></span></p>
+        <p> <b>Released: </b> <span class="released"></span></p>
+        <p> <b>Label: </b> <span class="label"></span></p>
+        <p> <b>Country of origin: </b> <span class="country"></span></p>
+        <h4></h4>
+      </article>
+    </section>
+
+    <!-- LOOP VIEW -->
+    <template>
+      <article>
+        <img src="" alt="" class="picture" />
+        <h3></h3>
+        <p>Artist: <span class="artist"></span></p>
+        <p>Title: <span class="title"></span></p>
+        <p>Genre: <span class="genre"></span></p>
+        
+        <h4></h4>
+      </article>
+    </template>
+
+    <script>
+      //RESTDB
+      const url = "https://neptune-7426.restdb.io/rest/vinyler";
+      const options = {
+        headers: {
+          "x-apikey": "432a7fc9895975495982c817c1897df0ac368",
+        },
+      };
+
+      //GLOBALE VARIABLER
+      document.addEventListener("DOMContentLoaded", start);
+      let vinyls;
+      let filter = "all";
+
+      //START FUNKTION (filtrer knapper)
+      function start() {
+        const filterButtons = document.querySelectorAll("nav button");
+        filterButtons.forEach((button) =>
+          button.addEventListener("click", filterVinyls)
+        );
+        getData();
+      }
+
+      //FILTRER FUNKTION (viser valgt(chosen) knap som farvet + skriver overskrift)
+      function filterVinyls() {
+        filter = this.dataset.genre;
+        document.querySelector(".chosen").classList.remove("chosen");
+        this.classList.add("chosen");
+        show();
+        header.textContent = this.textContent;
+      }
+
+      //ASYNC FUNKTION (asynkron metode henter ændringer uden at opdatere siden)
+      async function getData() {
+        const respons = await fetch(url, options);
+        //Her piller vi vores isolerede json data ud
+        const json = await respons.json();
+        vinyls = json;
+        show(json);
+      }
+
+      //GLOBALE CONST'ER (konstante variabler)
+      const main = document.querySelector("main");
+      const template = document.querySelector("template");
+      const header = document.querySelector("h2");
+      const md = "-md.jpg";
+
+      //FUNCTION VIS (med en array med en forEach (loop-syntax))
+      function show(json) {
+        console.log(json);
+        main.textContent = "";
+        vinyls.forEach((vinyl) => {
+          console.log("Genre", vinyl.genre);
+
+          if (filter == vinyl.genre || filter == "all") {
+            const clone = template.cloneNode(true).content;
+            clone.querySelector(".picture").src = "images/" + vinyl.image;
+            clone.querySelector("h3").textContent = vinyl.title;
+            clone.querySelector(".genre").textContent = vinyl.genre;
+            clone.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
+            clone.querySelector("article").addEventListener("click", () => showDetails(vinyl));
+            main.appendChild(clone);
+          }
+        });
+      }
+
+      //POP UP FUNKTION
+      function showDetails(vinyl) {
+        console.log(vinyl);
+        popup.style.display = "block";
+        popup.querySelector(".picture").src = "images/" + vinyl.image;
+        popup.querySelector("h3").textContent = vinyl.title;
+        popup.querySelector(".country").textContent = vinyl.country;
+        popup.querySelector(".released").textContent = vinyl.released;
+        popup.querySelector(".label").textContent = vinyl.label;
+        popup.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
+        document.querySelector("#close").addEventListener("click", () => popup.style.display = "none");
+      }
+
+      getData();
+
+    </script>
+  </body>
+
+  <footer>Footer</footer>
+  
 </html>
