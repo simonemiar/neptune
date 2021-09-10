@@ -69,9 +69,9 @@ article:hover {
 }
 
 .chosen {
-  background-color: white;
-  border-color: black;
-  color: black;
+  background-color: #9e8fff59;
+  border: #9d8fff solid 3px;
+  color: white;
 }
 
 nav {
@@ -103,8 +103,9 @@ button {
 }
 
 button:hover {
-  background-color: white;
-  color: black;
+  background-color: #9e8fff59;
+  border: #9d8fff solid 3px;
+  color: white;
   cursor: pointer;
 }
 
