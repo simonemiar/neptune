@@ -129,6 +129,7 @@
         console.log(vinyl);
         popup.style.display = "block";
         popup.querySelector(".picture").src = "images/" + vinyl.image;
+        popup.querySelector(".genre").textContent = vinyl.genre;
         popup.querySelector("h3").textContent = vinyl.title;
         popup.querySelector(".artist").textContent = vinyl.artist;
         popup.querySelector(".country").textContent = vinyl.country;
