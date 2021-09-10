@@ -38,13 +38,12 @@
       <article>
         <img src="" alt="" class="picture" />
         <h3></h3>
-        <p> <b>Genre:</b> <span class="genre"></span></p>
         <p> <b>Artist: </b> <span class="artist"></span></p>
-        <p> <b>Price: </b> <span class="price"></span></p>
-        <p> <b>Title: </b> <span class="title"></span></p>
+        <p> <b>Genre:</b> <span class="genre"></span></p>
         <p> <b>Released: </b> <span class="released"></span></p>
         <p> <b>Label: </b> <span class="label"></span></p>
         <p> <b>Country of origin: </b> <span class="country"></span></p>
+        <p>Do you have any questions about the product? Contact us here!</p>
         <h4></h4>
       </article>
     </section>
@@ -54,11 +53,7 @@
       <article>
         <img src="" alt="" class="picture" />
         <h3></h3>
-        <p>Artist: <span class="artist"></span></p>
-        <p>Genre: <span class="genre"></span></p>
-        
-
-        
+        <p><span class="artist"></span></p>
         <h4></h4>
       </article>
     </template>
@@ -122,8 +117,7 @@
             clone.querySelector(".picture").src = "images/" + vinyl.image;
             clone.querySelector("h3").textContent = vinyl.title;
             clone.querySelector(".artist").textContent = vinyl.artist;
-            clone.querySelector(".genre").textContent = vinyl.genre;
-            clone.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
+            clone.querySelector("h4").textContent = vinyl.price + " kr.";
             clone.querySelector("article").addEventListener("click", () => showDetails(vinyl));
             main.appendChild(clone);
           }
@@ -135,12 +129,13 @@
         console.log(vinyl);
         popup.style.display = "block";
         popup.querySelector(".picture").src = "images/" + vinyl.image;
+        popup.querySelector(".genre").textContent = vinyl.genre;
         popup.querySelector("h3").textContent = vinyl.title;
         popup.querySelector(".artist").textContent = vinyl.artist;
         popup.querySelector(".country").textContent = vinyl.country;
         popup.querySelector(".released").textContent = vinyl.released;
         popup.querySelector(".label").textContent = vinyl.label;
-        popup.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
+        popup.querySelector("h4").textContent = vinyl.price + " kr.";
         document.querySelector("#close").addEventListener("click", () => popup.style.display = "none");
       }
 
@@ -149,6 +144,12 @@
     </script>
   </body>
 
-  <footer>Footer</footer>
+  <footer>
+    <p>Adress: Neptungade 8, 4030 Tune</p>
+    <p>Telefon-nummer: 12 34 56 78</p>
+    <img src="images/neptune_logo.png" alt="">
+    <p>Mail: nepTuneSupport@mail.com</p>
+    <p>Do you have any questions? Contact us here!</p>
+  </footer>
   
 </html>
