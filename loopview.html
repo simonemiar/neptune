@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nepTune</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ipm3mce.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ipm3mce.css">
+    <link rel="icon" href="favicon/favicon.svg">
+  </head>
+
+  <body>
+    <!-- OVERSKRIFTER -->
+    <img src="images/neptune_logo.png" alt="neptune logo" class="logo">
+    <h1>All vinyls</h1>
+    <section></section>
+
+    <!-- KNAPPER -->
+      <nav>
+        <button data-genre="all" class="chosen">All vinyls</button>
+        <button data-genre="Pop">Pop</button>
+        <button data-genre="Rock">Rock</button>
+        <button data-genre="Indie Rock">Indie Rock</button>
+        <button data-genre="Hip Hop">Hip Hop</button>
+        <button data-genre="Electronic">Electronic</button>
+        <button data-genre="Jazz">Jazz</button>
+        <button data-genre="Country">Country</button>
+
+      </nav>
+
+    <!-- TOMT MAIN TAF (indhold bliver puttet ind senere) -->
+    <main></main>
+
+    <!-- POP UP / SINGLE VIEW -->
+    <section id="popup">
+      <div id="close">&#x2715</div>
+      <article>
+        <img src="" alt="" class="picture" />
+        <h3></h3>
+        <p> <b>Artist: </b> <span class="artist"></span></p>
+        <p> <b>Genre:</b> <span class="genre"></span></p>
+        <p> <b>Released: </b> <span class="released"></span></p>
+        <p> <b>Label: </b> <span class="label"></span></p>
+        <p> <b>Country of origin: </b> <span class="country"></span></p>
+        <p>Do you have any questions about the product? Contact us here!</p>
+        <h4></h4>
+      </article>
+    </section>
+
+    <!-- LOOP VIEW -->
+    <template>
+      <article>
+        <img src="" alt="" class="picture" />
+        <h3></h3>
+        <p><span class="artist"></span></p>
+        <h4></h4>
+      </article>
+    </template>
+
+    <script>
+      //RESTDB
+      const url = "https://neptune-7426.restdb.io/rest/vinyler";
+      const options = {
+        headers: {
+          "x-apikey": "613b243043cedb6d1f97ef4d",
+        },
+      };
+
+      //GLOBALE VARIABLER
+      document.addEventListener("DOMContentLoaded", start);
+      let vinyls;
+      let filter = "all";
+
+      //START FUNKTION (filtrer knapper)
+      function start() {
+        const filterButtons = document.querySelectorAll("nav button");
+        filterButtons.forEach((button) =>
+          button.addEventListener("click", filterVinyls)
+        );
+        getData();
+      }
+
+      //FILTRER FUNKTION (viser valgt(chosen) knap som farvet + skriver overskrift)
+      function filterVinyls() {
+        filter = this.dataset.genre;
+        console.log(filter);
+        document.querySelector(".chosen").classList.remove("chosen");
+        this.classList.add("chosen");
+        show();
+        header.textContent = this.textContent;
+      }
+
+      //ASYNC FUNKTION (asynkron metode henter ændringer uden at opdatere siden)
+      async function getData() {
+        const respons = await fetch(url, options);
+        //Her piller vi vores isolerede json data ud
+        vinyls = await respons.json();
+        console.log(vinyls);
+        show();
+      }
+
+      //GLOBALE CONST'ER (konstante variabler)
+      const main = document.querySelector("main");
+      const template = document.querySelector("template");
+      const header = document.querySelector("h1");
+
+
+      //FUNCTION VIS (med en array med en forEach (loop-syntax))
+      function show() {
+        main.textContent = "";
+        vinyls.forEach((vinyl) => {
+          //console.log("Genre", vinyl.genre);
+
+          if (filter == vinyl.genre || filter == "all") {
+            const clone = template.cloneNode(true).content;
+            clone.querySelector(".picture").src = "images/" + vinyl.image;
+            clone.querySelector("h3").textContent = vinyl.title;
+            clone.querySelector(".artist").textContent = vinyl.artist;
+            clone.querySelector("h4").textContent = vinyl.price + " kr.";
+            clone.querySelector("article").addEventListener("click", () => showDetails(vinyl));
+            main.appendChild(clone);
+          }
+        });
+      }
+
+      //POP UP FUNKTION
+      function showDetails(vinyl) {
+        console.log(vinyl);
+        popup.style.display = "block";
+        popup.querySelector(".picture").src = "images/" + vinyl.image;
+        popup.querySelector(".genre").textContent = vinyl.genre;
+        popup.querySelector("h3").textContent = vinyl.title;
+        popup.querySelector(".artist").textContent = vinyl.artist;
+        popup.querySelector(".country").textContent = vinyl.country;
+        popup.querySelector(".released").textContent = vinyl.released;
+        popup.querySelector(".label").textContent = vinyl.label;
+        popup.querySelector("h4").textContent = vinyl.price + " kr.";
+        document.querySelector("#close").addEventListener("click", () => popup.style.display = "none");
+      }
+
+      getData();
+
+    </script>
+  </body>
+
+  <footer>
+    <p>Adress: Neptungade 8, 4030 Tune</p>
+    <p>Telefon-nummer: 12 34 56 78</p>
+    <img src="images/neptune_logo.png" alt="Logo">
+    <p>Mail: nepTuneSupport@mail.com</p>
+    <p>Do you have any questions? Contact us here!</p>
+    <img src="images/facebook_trans.png" alt="Facebook">
+    <img src="images/discogs_trans.png" alt="Discogs">
+    <img src="images/instagram_trans.png" alt="Instagram">
+  </footer>
+  
+</html>
+
