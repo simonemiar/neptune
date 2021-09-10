@@ -53,7 +53,7 @@
       <article>
         <img src="" alt="" class="picture" />
         <h3></h3>
-        <p>Artist: <span class="artist"></span></p>
+        <p><span class="artist"></span></p>
         <h4></h4>
       </article>
     </template>
@@ -117,7 +117,7 @@
             clone.querySelector(".picture").src = "images/" + vinyl.image;
             clone.querySelector("h3").textContent = vinyl.title;
             clone.querySelector(".artist").textContent = vinyl.artist;
-            clone.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
+            clone.querySelector("h4").textContent = vinyl.price + " kr.";
             clone.querySelector("article").addEventListener("click", () => showDetails(vinyl));
             main.appendChild(clone);
           }
@@ -135,7 +135,7 @@
         popup.querySelector(".country").textContent = vinyl.country;
         popup.querySelector(".released").textContent = vinyl.released;
         popup.querySelector(".label").textContent = vinyl.label;
-        popup.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
+        popup.querySelector("h4").textContent = vinyl.price + " kr.";
         document.querySelector("#close").addEventListener("click", () => popup.style.display = "none");
       }
 
