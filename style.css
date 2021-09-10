@@ -14,16 +14,23 @@ h1 {
   font-style: normal;
   margin-top: 50px;
   margin-bottom: 7rem;
-  color: black;
+  color: #e3e3e3;
   font-size: 5vw;
 }
-h2,
+h2 {
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e3e3e3;
+}
+
 h3,
 h4,
 footer {
   font-family: eurostile, sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: black;
 }
 
 p {
@@ -34,13 +41,13 @@ p {
 
 h2,
 footer {
-  color: black;
+  color: #e3e3e3;
 }
 
 body {
   max-width: 1000px;
   margin: 0 auto;
-  background-color: white;
+  background-image: url(images/backround.svg);
 }
 @media only screen and (max-width: 1350px) {
   body {
