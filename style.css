@@ -1,4 +1,136 @@
+img {
+  max-width: 100%;
+  border: 3px solid black;
+}
+h1,
+h2 {
+  display: flex;
+  justify-content: center;
+}
 h1 {
-    font-size: large;
-    color: blue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 50px;
+  margin-bottom: 7rem;
+  color: black;
+  font-size: 5vw;
+}
+h2,
+h3,
+h4,
+p,
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2,
+footer {
+  color: black;
+}
+.stjerne {
+  font-size: 7rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+}
+@media only screen and (max-width: 1350px) {
+  body {
+    margin: 25px;
+  }
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 25px;
+  margin-bottom: 50px;
+}
+article {
+  border: 3px solid black;
+  padding: 25px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+}
+article:hover {
+  border: 3px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+.valgt {
+  background-color: white;
+  border-color: black;
+  color: black;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  grid-gap: 25px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+button {
+  padding: 8px 30px;
+  border: 3px solid black;
+  margin: 0 1px 1px 0;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+#popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: scroll;
+}
+#popup article {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  margin: 6rem auto;
+  padding: 30px;
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 5px;
+  cursor: default;
+}
+@media only screen and (max-width: 1000px) {
+  #popup article {
+    width: 40vh;
+  }
+}
+#popup h3,
+#popup h4 {
+  display: flex;
+  justify-content: center;
+}
+#luk {
+  position: fixed;
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  font-weight: 600;
 }
