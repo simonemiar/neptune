@@ -59,13 +59,12 @@ main {
 article {
   padding: 25px;
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
   color: white;
 }
 article:hover {
-  background-color: white;
-  color: black;
-  cursor: pointer;
+  background-color: #9e8fff59;
+  border: #9d8fff 3px inset;
+  color: white;
 }
 
 .chosen {
