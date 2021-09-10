@@ -3,8 +3,10 @@ img {
 }
 
 .logo {
-  height: 25vh;
+  height: 20vh;
   width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 h1,
