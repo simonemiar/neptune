@@ -58,7 +58,7 @@ article:hover {
   background-color: white;
   cursor: pointer;
 }
-.valgt {
+.chosen {
   background-color: white;
   border-color: black;
   color: black;
@@ -119,7 +119,7 @@ button:hover {
   display: flex;
   justify-content: center;
 }
-#luk {
+#close {
   position: fixed;
   padding: 2rem;
   font-size: 2rem;
