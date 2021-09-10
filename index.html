@@ -54,10 +54,6 @@
         <img src="" alt="" class="picture" />
         <h3></h3>
         <p>Artist: <span class="artist"></span></p>
-        <p>Genre: <span class="genre"></span></p>
-        
-
-        
         <h4></h4>
       </article>
     </template>
@@ -121,7 +117,6 @@
             clone.querySelector(".picture").src = "images/" + vinyl.image;
             clone.querySelector("h3").textContent = vinyl.title;
             clone.querySelector(".artist").textContent = vinyl.artist;
-            clone.querySelector(".genre").textContent = vinyl.genre;
             clone.querySelector("h4").textContent = "Price: " + vinyl.price + " kr.";
             clone.querySelector("article").addEventListener("click", () => showDetails(vinyl));
             main.appendChild(clone);
