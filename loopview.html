@@ -6,32 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>nepTune</title>
     <link rel="stylesheet" href="style.css">
+    <script src="burger.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/ipm3mce.css">
     <link rel="stylesheet" href="https://use.typekit.net/ipm3mce.css">
     <link rel="icon" href="favicon/favicon.svg">
   </head>
 
   <body>
-    <!-- OVERSKRIFTER -->
+    <!-- LOGO AND HEADLINE -->
     <img src="images/neptune_logo.png" alt="neptune logo" class="logo">
-    <h1>All vinyls</h1>
     <section></section>
 
-    <!-- KNAPPER -->
+    <!-- BUTTONS NAVBAR-->
       <nav>
-        <button data-genre="all" class="chosen">All vinyls</button>
-        <button data-genre="Pop">Pop</button>
-        <button data-genre="Rock">Rock</button>
-        <button data-genre="Jazz">Jazz</button>
-        <button data-genre="Hip Hop">Hip Hop</button>
-        <button data-genre="Electronic">Electronic</button>
-        <button data-genre="Country">Country</button>
+        <div id="burgerBtn">☰</div>
+           <ul id="burgerMenu" class="hidden">
+            <li><button data-genre="all" class="chosen">All vinyls</button></li>
+            <li><button data-genre="Pop">Pop</button></li>
+            <li><button data-genre="Rock">Rock</button></li>
+            <li><button data-genre="Jazz">Jazz</button></li>
+            <li><button data-genre="Hip Hop">Hip Hop</button></li>
+            <li><button data-genre="Electronic">Electronic</button></li>
+            <li><button data-genre="Country">Country</button></li>
+          </ul>
+
+        <div id="desktop_nav" class="hidden">
+          <button data-genre="all" class="chosen">All vinyls</button>
+          <button data-genre="Pop">Pop</button>
+          <button data-genre="Rock">Rock</button>
+          <button data-genre="Jazz">Jazz</button>
+          <button data-genre="Hip Hop">Hip Hop</button>
+          <button data-genre="Electronic">Electronic</button>
+          <button data-genre="Country">Country</button>
+        </div>
       </nav>
 
-    <!-- TOMT MAIN TAF (indhold bliver puttet ind senere) -->
+      <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
+      <h1>All vinyls</h1>
+
+    <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
 
-    <!-- POP UP / SINGLE VIEW -->
+    <!-- SINGLE VIEW - POPUP -->
     <section id="popup">
       <div id="close">&#x2715</div>
       <article>
@@ -47,7 +63,7 @@
       </article>
     </section>
 
-    <!-- LOOP VIEW -->
+    <!-- LOOP VIEW (the grid)-->
     <template>
       <article>
         <img src="" alt="" class="picture" />
