@@ -222,6 +222,13 @@ footer img {
   margin-bottom: 20rem;
 }
 
+@media only screen and (max-width: 800px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 .form {
   display: grid;
   place-content: center;
