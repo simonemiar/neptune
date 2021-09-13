@@ -156,10 +156,16 @@ nav {
 footer {
   display: flex;
   justify-content: center;
+  margin-top: 10rem;
   margin-bottom: 40px;
   font-size: 1rem;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer img {
+  height: 5vh;
+  width: auto;
 }
 
 /************ BURGERMENU **************/
