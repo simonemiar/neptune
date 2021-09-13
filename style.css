@@ -117,6 +117,11 @@ nav {
   opacity: 1;
 }
 
+.contact_link {
+  color: #2a0764;
+}
+
+/************ POP-UP **************/
 #popup {
   display: none;
   position: fixed;
@@ -130,6 +135,7 @@ nav {
 
 #popup article {
   width: 35vw;
+  height: 35vw;
   display: flex;
   flex-direction: column;
   margin: 6rem auto;
@@ -138,13 +144,17 @@ nav {
   border: 5px solid black;
   border-radius: 5px;
   cursor: default;
+  color: black;
 }
 
 #popup h3,
 #popup h4 {
   display: flex;
   justify-content: center;
+  font-weight: 600;
+  color: #2a0764;
 }
+
 #close {
   position: fixed;
   padding: 2rem;
@@ -153,6 +163,8 @@ nav {
   color: white;
   cursor: pointer;
 }
+
+/************ FOOTER **************/
 footer {
   display: flex;
   justify-content: center;
