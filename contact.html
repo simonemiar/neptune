@@ -7,10 +7,73 @@
     <link rel="stylesheet" href="style.css" />
     <title>Contact</title>
   </head>
+
   <body>
+    <nav>
+      <button data-genre="all" class="chosen">All vinyls</button>
+      <button data-genre="Pop">Pop</button>
+      <button data-genre="Rock">Rock</button>
+      <button data-genre="Jazz">Jazz</button>
+      <button data-genre="Hip Hop">Hip Hop</button>
+      <button data-genre="Electronic">Electronic</button>
+      <button data-genre="Country">Country</button>
+    </nav>
+
     <main>
-      <button>Tilbage</button>
+      <button class="back">Tilbage</button>
     </main>
+
+    <h2>Kontakt os her!</h2>
+
+    <section class="contact">
+      <div class="form">
+        <h3>Kontaktformular</h3>
+        <label for="navn">Fulde navn:</label>
+        <input
+          placeholder="fx Jens Jensen"
+          type="text"
+          id="navn"
+          name="navn"
+          required
+        />
+
+        <label for="email">E-mail:</label>
+        <input
+          placeholder="fx jens@gmail.com"
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+
+        <label>
+          Besked:
+          <textarea
+            name="besked"
+            rows="5"
+            placeholder="Her skriver du din besked"
+            type="besked"
+            id="besked"
+            name="besked"
+            required
+          ></textarea>
+        </label>
+      </div>
+
+      <div class="map">
+        <p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36066.10128361572!2d12.15497028295311!3d55.5997279782652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652f601195c0785%3A0xa00afcc1d508030!2s4030%20Tune!5e0!3m2!1sen!2sdk!4v1631523582983!5m2!1sen!2sdk"
+            width="400"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </p>
+      </div>
+    </section>
+
     <script>
       //TILBAGE KNAP
       document.querySelector("button").addEventListener("click", () => {

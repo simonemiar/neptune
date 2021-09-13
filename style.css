@@ -170,3 +170,29 @@ footer {
     margin: 25px;
   }
 }
+
+/* CONCTACT */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e3e3e3;
+}
+
+.map {
+  display: grid;
+  place-content: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
