@@ -166,19 +166,58 @@ nav {
 }
 
 /************ FOOTER **************/
+
 footer {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-rows: 1fr 1fr 1fr;
   margin-top: 10rem;
   margin-bottom: 40px;
+  padding-top: 2rem;
   font-size: 1rem;
   font-weight: 600;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-footer img {
-  height: 5vh;
+footer .box_1 {
+  /* grid-column: 1/2; */
+  grid-row: 1/2;
+  text-align: center;
+  padding: 0;
+}
+
+footer .box_1 p {
+  margin-bottom: 0;
+}
+
+footer .box_2 {
+  display: none;
+}
+
+footer .box_3 {
+  /* grid-column: 1/2; */
+  grid-row: 2/3;
+  text-align: center;
+  padding: 0;
+}
+
+footer .box_3 p {
+  margin-top: 0;
+}
+
+footer .box_4 {
+  display: flex;
+  /* grid-column: 2/3; */
+  grid-row: 3/4;
+  padding: 1rem;
+  place-content: center;
+  gap: 20px;
+}
+
+footer .box_4 img {
+  height: 10vw;
   width: auto;
+  margin-bottom: 10px;
 }
 
 /************ BURGERMENU **************/
@@ -333,5 +372,63 @@ footer img {
     border: #9d8fff solid 3px;
     color: white;
     cursor: pointer;
+  }
+}
+
+/**************** MEDIAQUERY FOR FOOTER ***************/
+
+@media (min-width: 600px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 10rem;
+    margin-bottom: 40px;
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  footer .box_1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: right;
+    padding-left: 6rem;
+  }
+
+  footer .box_2 {
+    display: unset;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  footer .box_2 img {
+    height: auto;
+    width: auto;
+  }
+
+  footer .box_3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: left;
+    padding-right: 6rem;
+  }
+
+  footer .box_4 {
+    display: flex;
+    place-content: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    gap: 20px;
+  }
+
+  footer .box_4 img {
+    height: 4vw;
+    width: auto;
   }
 }
