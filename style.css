@@ -279,55 +279,78 @@ footer .box_4 img {
 /******************************************/
 
 /* CONCTACT */
-.contact {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 20rem;
-  grid-column: 2/3;
-}
-
-@media only screen and (max-width: 800px) {
-  .contact {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
-.form {
-  display: grid;
-  place-content: center;
-  gap: 0.5rem;
-  padding: 10px;
+.wrapper {
+  max-width: 500px;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
+  margin: 10px;
+  padding: 30px;
+}
+
+.wrapper iframe {
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper .title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #9c8fff;
+  text-transform: uppercase;
+  text-align: center;
   font-family: eurostile, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
-  color: #e3e3e3;
 }
-
-.map {
-  display: grid;
-  place-content: center;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
+.wrapper .form {
+  width: 100%;
 }
-
-.send {
-  border: 1px solid white;
-  margin: 0 1px 1px 0;
+.wrapper .form .input_field {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .form .input_field label {
+  width: 200px;
+  color: white;
+  margin-right: 10px;
+  font-size: 14px;
+  font-family: roboto, sans-serif;
+  font-weight: 550;
+  font-style: normal;
+}
+.wrapper .form .input_field .input,
+.wrapper .form .input_field .textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #2a0764;
+  font-size: 15px;
+  padding: 8px 10px;
   border-radius: 5px;
-  height: 2.5em;
-  width: 5em;
 }
-
-.back {
-  border: 2px solid white;
-  margin: 0 1px 1px 0;
+.wrapper .form .input_field .textarea {
+  resize: none;
+  height: 125px;
+}
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field .textarea:focus,
+.wrapper .form .input_field select:focus {
+  border: 1px solid #9c8fff;
+}
+.wrapper .form .input_field .btn {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0;
+  background: #9c8fff;
+  color: white;
+  cursor: pointer;
   border-radius: 5px;
-  height: 3em;
-  width: 7em;
+  outline: none;
+}
+.wrapper .form .input_field .btn:hover {
+  background: #a89ef8;
 }
 
 /**************** MEDIAQUERY FOR BODY MARGIN ON DESKTOP ***************/
