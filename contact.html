@@ -49,65 +49,47 @@
     <h1>Contact us here!</h1>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
-    <main></main>
-
-    <!-- SECTION WITH FORMS AND GOOGLE MAPS -->
-    <section class="contact">
-      <div class="form">
-        <h3>Contact form</h3>
-        <div class="form_felt">
-          <label for="name">Full name:</label>
-          <input
-            placeholder="fx Jens Jensen"
-            type="text"
-            id="name"
-            name="name"
-            required
-          />
+    <main>
+      <div class="wrapper">
+        <div class="title">Registration Form</div>
+        <div class="form">
+          <div class="input_field">
+            <label>First name</label>
+            <input type="text" class="input" />
+          </div>
+          <div class="input_field">
+            <label>Last name</label>
+            <input type="text" class="input" />
+          </div>
+          <div class="input_field">
+            <label>Email Address</label>
+            <input type="text" class="input" />
+          </div>
+          <div class="input_field">
+            <label>Phone Number</label>
+            <input type="text" class="input" />
+          </div>
+          <div class="input_field">
+            <label>Message</label>
+            <textarea class="textarea"></textarea>
+          </div>
+          <div class="input_field">
+            <input type="submit" value="Send" class="btn" />
+          </div>
         </div>
-
-        <div class="form_felt">
-          <label for="email">E-mail:</label>
-          <input
-            placeholder="fx jens@gmail.com"
-            type="email"
-            id="email"
-            name="email"
-            required
-          />
-        </div>
-
-        <div class="form_felt">
-          <label>
-            Message:
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="You can write your message here"
-              type="message"
-              id="message"
-              name="message"
-              required
-            ></textarea>
-          </label>
-        </div>
-        <button class="send">Send</button>
       </div>
-
-      <!-- FROM GEEK TUTORIALS: https://www.youtube.com/watch?v=KIC0OK9nKXY-->
+      <!-- FROM GEEK TUTORIALS: https://www.youtube.com/watch?v=KIC0OK9nKXY -->
       <div class="map">
-        <p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36066.10128361572!2d12.15497028295311!3d55.5997279782652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652f601195c0785%3A0xa00afcc1d508030!2s4030%20Tune!5e0!3m2!1sen!2sdk!4v1631523582983!5m2!1sen!2sdk"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36066.10128361572!2d12.15497028295311!3d55.5997279782652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652f601195c0785%3A0xa00afcc1d508030!2s4030%20Tune!5e0!3m2!1sen!2sdk!4v1631523582983!5m2!1sen!2sdk"
+          width="400"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
-    </section>
+    </main>
   </body>
 
   <footer>
@@ -128,13 +110,18 @@
     </div>
     <div class="box_4">
       <a href="https://www.facebook.com/">
-      <img src="images/facebook_trans.png" a href="facebook.com" alt="Facebook">
+        <img
+          src="images/facebook_trans.png"
+          a
+          href="facebook.com"
+          alt="Facebook"
+        />
       </a>
       <a href="https://www.discogs.com/">
-      <img src="images/discogs_trans.png" alt="Discogs">
+        <img src="images/discogs_trans.png" alt="Discogs" />
       </a>
       <a href="https://www.instagram.com/">
-      <img src="images/instagram_trans.png" alt="Instagram" >
+        <img src="images/instagram_trans.png" alt="Instagram" />
       </a>
     </div>
   </footer>
