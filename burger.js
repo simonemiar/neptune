@@ -16,6 +16,6 @@ function toggleMenu() {
   if (erSkjult == true) {
     document.querySelector("#burgerBtn").textContent = "☰";
   } else {
-    document.querySelector("#burgerBtn").textContent = "✖";
+    document.querySelector("#burgerBtn").textContent = "⨉";
   }
 }
