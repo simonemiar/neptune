@@ -18,6 +18,6 @@ function toggleMenu() {
     burgerBtn.style.left = "5em";
   } else {
     document.querySelector("#burgerBtn").textContent = "X";
-    burgerBtn.style.left = "1em";
+    burgerBtn.style.right = "1em";
   }
 }

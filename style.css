@@ -72,6 +72,8 @@ body {
 
 .header {
   grid-column: 2/3;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 main {
@@ -267,9 +269,12 @@ footer .box_4 img {
   transform-origin: top left;
   text-align: right;
   position: fixed;
-  left: 14em;
+  left: 13.2em;
   line-height: 2.5em;
   background-color: #e3e3e373;
+  top: 5em;
+  grid-column: 2/3;
+  padding: 10px;
 }
 
 /******************************************/
