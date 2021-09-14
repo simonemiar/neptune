@@ -126,7 +126,7 @@ article:hover {
   flex-wrap: wrap;
   /* position: -webkit-sticky; Safari */
   /* position: sticky; */
-  top: 0; */
+  /* top: 0; */
 }
 
 #desktop_nav.hidden {
@@ -272,7 +272,7 @@ footer .box_4 img {
   padding: 20px;
 }
 
-#burgerMenu button{
+#burgerMenu button {
   margin-bottom: 10px;
 }
 
