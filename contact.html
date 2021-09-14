@@ -13,61 +13,86 @@
   </head>
 
   <body>
+    <!-- LOGO AND HEADLINE -->
     <a href="loopview.html"
       ><img src="images/neptune_logo.png" alt="neptune logo" class="logo"
     /></a>
-
     <section></section>
+
+    <!-- BUTTONS NAVBAR-->
     <nav>
-      <button data-genre="all" class="chosen">All vinyls</button>
-      <button data-genre="Pop">Pop</button>
-      <button data-genre="Rock">Rock</button>
-      <button data-genre="Jazz">Jazz</button>
-      <button data-genre="Hip Hop">Hip Hop</button>
-      <button data-genre="Electronic">Electronic</button>
-      <button data-genre="Country">Country</button>
+      <div id="burgerBtn">☰</div>
+      <ul id="burgerMenu" class="hidden">
+        <li><button data-genre="all" class="chosen">All vinyls</button></li>
+        <li><button data-genre="Pop">Pop</button></li>
+        <li><button data-genre="Rock">Rock</button></li>
+        <li><button data-genre="Jazz">Jazz</button></li>
+        <li><button data-genre="Hip Hop">Hip Hop</button></li>
+        <li><button data-genre="Electronic">Electronic</button></li>
+        <li><button data-genre="Country">Country</button></li>
+      </ul>
+
+      <div id="desktop_nav" class="hidden">
+        <button data-genre="all" class="chosen">All vinyls</button>
+        <button data-genre="Pop">Pop</button>
+        <button data-genre="Rock">Rock</button>
+        <button data-genre="Jazz">Jazz</button>
+        <button data-genre="Hip Hop">Hip Hop</button>
+        <button data-genre="Electronic">Electronic</button>
+        <button data-genre="Country">Country</button>
+      </div>
     </nav>
 
-    <main></main>
-
+    <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
     <h1>Contact us here!</h1>
 
+    <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
+    <main></main>
+
+    <!-- SECTION WITH FORMS AND GOOGLE MAPS -->
     <section class="contact">
       <div class="form">
         <h3>Contact form</h3>
-        <label for="name">Full name:</label>
-        <input
-          placeholder="fx Jens Jensen"
-          type="text"
-          id="name"
-          name="name"
-          required
-        />
-
-        <label for="email">E-mail:</label>
-        <input
-          placeholder="fx jens@gmail.com"
-          type="email"
-          id="email"
-          name="email"
-          required
-        />
-
-        <label>
-          Message:
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="You can write your message here"
-            type="message"
-            id="message"
-            name="message"
+        <div class="form_felt">
+          <label for="name">Full name:</label>
+          <input
+            placeholder="fx Jens Jensen"
+            type="text"
+            id="name"
+            name="name"
             required
-          ></textarea>
-        </label>
+          />
+        </div>
+
+        <div class="form_felt">
+          <label for="email">E-mail:</label>
+          <input
+            placeholder="fx jens@gmail.com"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form_felt">
+          <label>
+            Message:
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="You can write your message here"
+              type="message"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+          </label>
+        </div>
         <button class="send">Send</button>
       </div>
 
+      <!-- FROM GEEK TUTORIALS: https://www.youtube.com/watch?v=KIC0OK9nKXY-->
       <div class="map">
         <p>
           <iframe
@@ -81,16 +106,6 @@
         </p>
       </div>
     </section>
-
-    <script>
-      //RESTDB
-      const url = "https://neptune-7426.restdb.io/rest/vinyler";
-      const options = {
-        headers: {
-          "x-apikey": "613b243043cedb6d1f97ef4d",
-        },
-      };
-    </script>
   </body>
 
   <footer>
