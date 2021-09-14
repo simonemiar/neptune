@@ -89,10 +89,10 @@
       document.addEventListener("DOMContentLoaded", start);
       let vinyls;
       let filter = "all";
+      const filterButtons = document.querySelectorAll("nav button");;
 
       //START FUNKTION (filtrer knapper)
       function start() {
-        const filterButtons = document.querySelectorAll("nav button");
         filterButtons.forEach((button) =>
           button.addEventListener("click", filterVinyls)
         );
@@ -103,7 +103,9 @@
       function filterVinyls() {
         filter = this.dataset.genre;
         console.log(filter);
-        document.querySelector(".chosen").classList.remove("chosen");
+         filterButtons.forEach((button) =>
+        button.classList.remove("chosen")
+        );
         this.classList.add("chosen");
         show();
         header.textContent = this.textContent;
