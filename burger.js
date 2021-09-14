@@ -17,7 +17,7 @@ function toggleMenu() {
     document.querySelector("#burgerBtn").textContent = "☰";
     burgerBtn.style.left = "5em";
   } else {
-    document.querySelector("#burgerBtn").textContent = "X";
+    document.querySelector("#burgerBtn").textContent = "✖";
     burgerBtn.style.right = "1em";
   }
 }
