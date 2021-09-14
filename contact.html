@@ -13,63 +13,88 @@
   </head>
 
   <body>
-    <a href="loopview.html"
-      ><img src="images/neptune_logo.png" alt="neptune logo" class="logo"
-    /></a>
-    <h1>All vinyls</h1>
+    <!-- LOGO AND HEADLINE -->
+    <div class="header">
+      <a href="loopview.html"
+        ><img src="images/neptune_logo.png" alt="neptune logo" class="logo"
+      /></a>
+    </div>
     <section></section>
+
+    <!-- BUTTONS NAVBAR-->
     <nav>
-      <button data-genre="all" class="chosen">All vinyls</button>
-      <button data-genre="Pop">Pop</button>
-      <button data-genre="Rock">Rock</button>
-      <button data-genre="Jazz">Jazz</button>
-      <button data-genre="Hip Hop">Hip Hop</button>
-      <button data-genre="Electronic">Electronic</button>
-      <button data-genre="Country">Country</button>
+      <div id="burgerBtn">☰</div>
+      <ul id="burgerMenu" class="hidden">
+        <li><button data-genre="all" class="chosen">All vinyls</button></li>
+        <li><button data-genre="Pop">Pop</button></li>
+        <li><button data-genre="Rock">Rock</button></li>
+        <li><button data-genre="Jazz">Jazz</button></li>
+        <li><button data-genre="Hip Hop">Hip Hop</button></li>
+        <li><button data-genre="Electronic">Electronic</button></li>
+        <li><button data-genre="Country">Country</button></li>
+      </ul>
+
+      <div id="desktop_nav" class="hidden">
+        <button data-genre="all" class="chosen">All vinyls</button>
+        <button data-genre="Pop">Pop</button>
+        <button data-genre="Rock">Rock</button>
+        <button data-genre="Jazz">Jazz</button>
+        <button data-genre="Hip Hop">Hip Hop</button>
+        <button data-genre="Electronic">Electronic</button>
+        <button data-genre="Country">Country</button>
+      </div>
     </nav>
 
-    <main>
-      <button class="back">Back</button>
-    </main>
+    <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
+    <h1>Contact us here!</h1>
 
-    <h2>Contact us here!</h2>
+    <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
+    <main></main>
 
+    <!-- SECTION WITH FORMS AND GOOGLE MAPS -->
     <section class="contact">
       <div class="form">
         <h3>Contact form</h3>
-        <label for="name">Full name:</label>
-        <input
-          placeholder="fx Jens Jensen"
-          type="text"
-          id="name"
-          name="name"
-          required
-        />
-
-        <label for="email">E-mail:</label>
-        <input
-          placeholder="fx jens@gmail.com"
-          type="email"
-          id="email"
-          name="email"
-          required
-        />
-
-        <label>
-          Message:
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="You can write your message here"
-            type="message"
-            id="message"
-            name="message"
+        <div class="form_felt">
+          <label for="name">Full name:</label>
+          <input
+            placeholder="fx Jens Jensen"
+            type="text"
+            id="name"
+            name="name"
             required
-          ></textarea>
-        </label>
+          />
+        </div>
+
+        <div class="form_felt">
+          <label for="email">E-mail:</label>
+          <input
+            placeholder="fx jens@gmail.com"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form_felt">
+          <label>
+            Message:
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="You can write your message here"
+              type="message"
+              id="message"
+              name="message"
+              required
+            ></textarea>
+          </label>
+        </div>
         <button class="send">Send</button>
       </div>
 
+      <!-- FROM GEEK TUTORIALS: https://www.youtube.com/watch?v=KIC0OK9nKXY-->
       <div class="map">
         <p>
           <iframe
@@ -83,34 +108,28 @@
         </p>
       </div>
     </section>
-
-    <script>
-      //TILBAGE KNAP
-      document.querySelector("button").addEventListener("click", () => {
-        window.history.back();
-      });
-    </script>
   </body>
+
   <footer>
     <div class="box_1">
       <p class="bold">Adress</p>
-    <p>Neptungade 8, 4030 Tune</p>
-    <p class="bold">Number</p>
-    <p>12 34 56 78</p>
-  </div>
-  <div class="box_2">
-    <img src="images/neptune_logo.png" alt="Logo">
-  </div>
+      <p>Neptungade 8, 4030 Tune</p>
+      <p class="bold">Number</p>
+      <p>12 34 56 78</p>
+    </div>
+    <div class="box_2">
+      <img src="images/neptune_logo.png" alt="Logo" />
+    </div>
     <div class="box_3">
       <p class="bold">Mail</p>
-    <p>nepTuneSupport@mail.com</p>
-    <p class="bold">Any questions?</p>
-    <p>Contact us <a class="contact_link" href="contact.html">here</a>!</p>
-  </div>
-  <div class="box_4">
-    <img src="images/facebook_trans.png" alt="Facebook">
-    <img src="images/discogs_trans.png" alt="Discogs">
-    <img src="images/instagram_trans.png" alt="Instagram">
-  </div>
+      <p>nepTuneSupport@mail.com</p>
+      <p class="bold">Any questions?</p>
+      <p>Contact us <a class="contact_link" href="contact.html">here</a>!</p>
+    </div>
+    <div class="box_4">
+      <img src="images/facebook_trans.png" alt="Facebook" />
+      <img src="images/discogs_trans.png" alt="Discogs" />
+      <img src="images/instagram_trans.png" alt="Instagram" />
+    </div>
   </footer>
 </html>
