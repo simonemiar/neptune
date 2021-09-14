@@ -70,17 +70,15 @@ body {
   background-image: url(images/new_backroundpng.png);
 }
 
-header {
+/* header {
   display: grid;
   grid-template-columns: 50vw 50vw;
-}
+} */
 
 main {
   grid-column: 2/3;
   display: flex;
   flex-wrap: wrap;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
   grid-gap: 20px;
   row-gap: 30px;
   margin-bottom: 50px;
