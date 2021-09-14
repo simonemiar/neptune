@@ -70,9 +70,9 @@ body {
   background-image: url(images/new_backroundpng.png);
 }
 
-.header {
-  /* display: grid;
-  grid-template-columns: 1fr 0.5fr; */
+header {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
 }
 
 main {
@@ -466,7 +466,9 @@ footer .box_4 img {
     width: auto;
   }
 
-  .header {
+  header {
+    display: flex;
     grid-column: 2/3;
+    place-content: center;
   }
 }
