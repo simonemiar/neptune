@@ -71,9 +71,8 @@ body {
 }
 
 .header {
-  grid-column: 2/3;
-  display: grid;
-  grid-template-columns: 1fr auto;
+  /* display: grid;
+  grid-template-columns: 1fr 0.5fr; */
 }
 
 main {
@@ -85,6 +84,7 @@ main {
   grid-gap: 20px;
   row-gap: 30px;
   margin-bottom: 50px;
+  justify-content: center;
 }
 
 button {
@@ -275,6 +275,8 @@ footer .box_4 img {
   top: 5em;
   grid-column: 2/3;
   padding: 10px;
+  display: flex;
+  place-content: center;
 }
 
 /******************************************/
@@ -366,7 +368,8 @@ footer .box_4 img {
 
   #burgerMenu.hidden {
     transform: translateX(0);
-    opacity: 1;
+    /* opacity: 1; */
+    opacity: 0;
   }
 
   #burgerMenu li {
@@ -402,7 +405,7 @@ footer .box_4 img {
   }
 }
 
-/**************** MEDIAQUERY FOR FOOTER ***************/
+/**************** MEDIAQUERY FOR FOOTER OG HEADER***************/
 
 @media (min-width: 700px) {
   footer {
@@ -461,5 +464,9 @@ footer .box_4 img {
   footer .box_4 img {
     height: 4vw;
     width: auto;
+  }
+
+  .header {
+    grid-column: 2/3;
   }
 }
