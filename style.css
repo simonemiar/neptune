@@ -1,14 +1,16 @@
-img {
-  max-width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
 .logo {
-  height: 15vh;
   width: auto;
   display: block;
   margin: 0 auto;
   object-fit: cover;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 h1,
@@ -62,20 +64,22 @@ footer {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+  /* display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr; */
   /* max-width: 1000px; */
   /* display: block; */
   margin: 0 auto;
   background-image: url(images/new_backroundpng.png);
 }
 
-/* header {
-  display: grid;
-  grid-template-columns: 50vw 50vw;
-} */
+header {
+  display: inline-block;
+  width: 200px;
+}
 
 main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
   grid-column: 2/3;
   display: flex;
   flex-wrap: wrap;
@@ -246,11 +250,12 @@ footer .box_4 img {
   display: inline-block;
   color: #e3e3e3;
   font-family: eurostile, sans-serif;
-  font-weight: 400;
+  font-weight: lighter;
   font-style: normal;
   cursor: pointer;
   font-size: 3.5em;
   position: fixed;
+  top: 0.5em;
   left: 5em;
 }
 
@@ -262,19 +267,16 @@ footer .box_4 img {
 }
 
 #burgerMenu {
+  position: absolute;
   list-style-type: none;
   transition: transform 0.3s;
-  transform-origin: top left;
   text-align: right;
-  position: fixed;
-  left: 13.2em;
-  line-height: 2.5em;
+  position: sticky;
+  left: 15em;
+  line-height: 3em;
   background-color: #e3e3e373;
   top: 5em;
-  grid-column: 2/3;
   padding: 10px;
-  display: flex;
-  place-content: center;
 }
 
 /******************************************/
@@ -333,7 +335,7 @@ footer .box_4 img {
 
 /**************** MEDIAQUERY FOR BODY MARGIN ON DESKTOP ***************/
 @media only screen and (max-width: 1350px) {
-  body {
+  main {
     margin: 25px;
   }
 }
@@ -342,6 +344,10 @@ footer .box_4 img {
 @media only screen and (max-width: 1000px) {
   #popup article {
     width: 40vh;
+  }
+
+  .logo{
+    max-width: 80%;
   }
 }
 
@@ -360,6 +366,10 @@ footer .box_4 img {
     top: 0;
   }
 
+  .logo{
+    max-width: 150%;
+  }
+
   #burgerBtn {
     display: none;
   }
@@ -372,10 +382,6 @@ footer .box_4 img {
 
   #burgerMenu li {
     display: inline-block;
-  }
-
-  .logo {
-    height: 20vh;
   }
 
   button {
