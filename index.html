@@ -53,10 +53,40 @@
         height: 6em;
         width: 6em;
       }
+
+      video {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain;
+      }
+
+      video:-webkit-full-page-media {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
+      }
     </style>
     <title>nepTune</title>
   </head>
   <body>
-    <!-- <img src="images/neptune_logo.png" alt="neptune logo" class="logo_index" /> -->
+    <div class="videoWrapper">
+      <video autoplay muted loop>
+        <source src="images/rotating_animation.mp4" type="video/mp4" />
+      </video>
+      <!-- <button><a href="loopview.html"></a>Click me</button> -->
+    </div>
+
+    <script>
+         setTimeout(function(){
+            window.location.href = 'loopview.html';
+         }, 3000);
+      </script>
+      
+    </script>
   </body>
 </html>
