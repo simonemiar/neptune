@@ -512,4 +512,8 @@ footer .box_4 img {
     object-fit: cover;
     margin-top: 1rem;
   }
+
+  article img {
+    width: 100%;
+  }
 }
