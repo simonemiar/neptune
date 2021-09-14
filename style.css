@@ -126,8 +126,8 @@ nav {
   margin-top: 50px;
   overflow-x: auto;
   flex-wrap: wrap;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  /* position: -webkit-sticky; Safari */
+  /* position: sticky; */
   top: 0;
 }
 
@@ -281,6 +281,7 @@ footer .box_4 img {
   gap: 2rem;
   margin-top: 4rem;
   margin-bottom: 20rem;
+  grid-column: 2/3;
 }
 
 @media only screen and (max-width: 800px) {
