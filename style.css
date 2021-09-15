@@ -126,6 +126,13 @@ article h5 {
   font-size: 1rem;
 }
 
+.price-placement_loopview {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-top: -2em;
+}
+
 .chosen {
   background-color: #9e8fff59;
   border: #9d8fff solid 3px;
