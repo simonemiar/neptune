@@ -67,6 +67,7 @@ footer {
 body {
   margin: 0 auto;
   background-image: url(images/new_backroundpng.png);
+  max-width: 1200px;
 }
 
 header {
