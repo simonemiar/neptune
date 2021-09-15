@@ -81,8 +81,8 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 20px;
-  row-gap: 30px;
+  grid-gap: 40px;
+  row-gap: 40px;
   margin-bottom: 50px;
   justify-content: center;
 }
@@ -102,8 +102,8 @@ button {
 
 article {
   padding: 25px;
-  height: 16rem;
-  width: 16rem;
+  height: 18.5rem;
+  width: 18.5rem;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   border: 3px solid transparent;
