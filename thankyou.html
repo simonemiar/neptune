@@ -70,6 +70,18 @@
         max-width: 100%;
         margin: auto;
       }
+
+      h3.thankyou {
+          text-align: center;
+          font-size: 2em;
+      }
+
+
+      @media only screen and (max-width: 800px) {
+        h3.thankyou {
+        font-size: 1.5rem;
+        }
+    }
     </style>
     <title>nepTune</title>
   </head>
@@ -79,13 +91,14 @@
         <source src="images/rotating_animation.mp4" type="video/mp4" />
       </video>
       <h1>Thank you!</h1>
-      <h2>Your will in a few seconds be redirected to the frontpage.</h2>
+      <h3 class="thankyou">In a few seconds, you will be redirected to the <span><a class="contact_link_light" href="loopview.html">frontpage</a></span>.</h3>
+      <a href="loopview.html"></a>
     </div>
 
     <script>
          setTimeout(function(){
             window.location.href = 'loopview.html';
-         }, 8500);
+         }, 7000);
       </script>
       
     </script>
