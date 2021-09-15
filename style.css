@@ -46,6 +46,7 @@ h2 {
 
 h3,
 h4,
+h5,
 footer {
   font-family: eurostile, sans-serif;
   font-weight: 400;
@@ -120,6 +121,9 @@ article:hover {
 article h3 {
   text-transform: uppercase;
 }
+article h5 {
+  font-size: 1rem;
+}
 
 .chosen {
   background-color: #9e8fff59;
@@ -178,7 +182,8 @@ article h3 {
 }
 
 #popup h3,
-#popup h4 {
+#popup h4,
+#popup h5 {
   display: flex;
   justify-content: center;
   font-weight: 600;
@@ -546,11 +551,15 @@ footer .box_4 img {
 
   #popup article h3 {
     font-size: 1.7rem;
-    margin-bottom: 10px;
   }
 
   #popup article h4 {
     font-size: 1.4rem;
+    margin-top: 10px;
+  }
+
+  #popup article h5 {
+    font-size: 1.2rem;
     margin-top: 10px;
   }
 }
