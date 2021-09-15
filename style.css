@@ -184,7 +184,7 @@ footer .contact_link {
 
 #popup article {
   width: 50vw;
-  height: 125vw;
+  height: 150vw;
   display: flex;
   flex-direction: column;
   margin: 6rem auto;
@@ -570,6 +570,7 @@ footer .box_4 img {
 
   #popup article img {
     display: block;
+    margin: 0 auto;
     height: auto;
     width: 70%;
   }
