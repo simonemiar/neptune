@@ -555,11 +555,12 @@ footer .box_4 img {
 
   #popup article h4 {
     font-size: 1.4rem;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 
   #popup article h5 {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
