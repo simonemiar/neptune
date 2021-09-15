@@ -47,7 +47,7 @@
   <body>
     <!-- LOGO AND HEADLINE -->
     <header>
-      <a href="loopview.html"><img src="images/neptune_logo.png" alt="neptune logo" class="logo"></a>
+      <a href="loopview.html"><img src="images/logo.png" alt="neptune logo" class="logo"></a>
     </header>
     
       <div id="burgerBtn">☰</div>
@@ -87,13 +87,13 @@
       <article>
         <img src="" alt="" class="picture" />
         <h3></h3>
-        <p> <b>Artist: </b> <span class="artist"></span></p>
+        <h4><b></b> <span class="artist"></span></h4>
         <p> <b>Genre:</b> <span class="genre"></span></p>
         <p> <b>Released: </b> <span class="released"></span></p>
         <p> <b>Label: </b> <span class="label"></span></p>
         <p> <b>Country of origin: </b> <span class="country"></span></p>
         <p>Do you have any questions about the product? Contact us <a class="contact_link" href="contact.html">here</a>!</p>
-        <h4></h4>
+        <h5></h5>
       </article>
     </section>
 
@@ -103,7 +103,7 @@
         <img src="" alt="" class="picture" />
         <h3></h3>
         <p><span class="artist"></span></p>
-        <h4></h4>
+        <h5></h5>
       </article>
     </template>
 
@@ -175,7 +175,7 @@
             clone.querySelector(".picture").src = "images/" + vinyl.image;
             clone.querySelector("h3").textContent = vinyl.title;
             clone.querySelector(".artist").textContent = vinyl.artist;
-            clone.querySelector("h4").textContent = vinyl.price + " kr.";
+            clone.querySelector("h5").textContent = vinyl.price + " kr.";
             clone.querySelector("article").addEventListener("click", () => showDetails(vinyl));
             main.appendChild(clone);
           }
@@ -189,11 +189,11 @@
         popup.querySelector(".picture").src = "images/" + vinyl.image;
         popup.querySelector(".genre").textContent = vinyl.genre;
         popup.querySelector("h3").textContent = vinyl.title;
-        popup.querySelector(".artist").textContent = vinyl.artist;
+        popup.querySelector(".artist").textContent = "by " + vinyl.artist;
         popup.querySelector(".country").textContent = vinyl.country;
         popup.querySelector(".released").textContent = vinyl.released;
         popup.querySelector(".label").textContent = vinyl.label;
-        popup.querySelector("h4").textContent = vinyl.price + " kr.";
+        popup.querySelector("h5").textContent = vinyl.price + " kr.";
         document.querySelector("#close").addEventListener("click", () => popup.style.display = "none");
       }
 
@@ -211,7 +211,7 @@
   </div>
   <div class="box_2">
     <a href="loopview.html">
-      <img src="images/neptune_logo.png" alt="Logo" />
+      <img src="images/logo.png" alt="Logo" />
     </a>
   </div>
     <div class="box_3">

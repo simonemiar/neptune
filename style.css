@@ -46,6 +46,7 @@ h2 {
 
 h3,
 h4,
+h5,
 footer {
   font-family: eurostile, sans-serif;
   font-weight: 400;
@@ -67,6 +68,7 @@ footer {
 body {
   margin: 0 auto;
   background-image: url(images/new_backroundpng.png);
+  max-width: 1000px;
 }
 
 header {
@@ -79,8 +81,8 @@ header {
 main {
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 20px;
-  row-gap: 30px;
+  grid-gap: 40px;
+  row-gap: 40px;
   margin-bottom: 50px;
   justify-content: center;
 }
@@ -100,11 +102,12 @@ button {
 
 article {
   padding: 25px;
-  height: 16rem;
-  width: 16rem;
+  height: 18.5rem;
+  width: 18.5rem;
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   border: 3px solid transparent;
+  line-height: 30px;
 }
 
 article img {
@@ -118,6 +121,9 @@ article:hover {
 }
 article h3 {
   text-transform: uppercase;
+}
+article h5 {
+  font-size: 1rem;
 }
 
 .chosen {
@@ -149,6 +155,10 @@ article h3 {
   color: #2a0764;
 }
 
+footer .contact_link {
+  color: #9c8fff;
+}
+
 /************ POP-UP **************/
 #popup {
   display: none;
@@ -177,7 +187,8 @@ article h3 {
 }
 
 #popup h3,
-#popup h4 {
+#popup h4,
+#popup h5 {
   display: flex;
   justify-content: center;
   font-weight: 600;
@@ -209,7 +220,7 @@ footer {
 
 footer h4 {
   font-weight: bold;
-  margin-bottom: 0;
+  margin-top: 20px;
 }
 
 footer .box_1 {
@@ -292,7 +303,7 @@ footer .box_4 img {
 
 /* CONCTACT */
 .wrapper {
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   margin: 10px;
@@ -302,6 +313,7 @@ footer .box_4 img {
 .wrapper iframe {
   height: 100%;
   width: 100%;
+  border: solid 2px #9d8fff;
 }
 
 .wrapper .title {
@@ -363,6 +375,14 @@ footer .box_4 img {
 }
 .wrapper .form .input_field .btn:hover {
   background: #a89ef8;
+}
+
+.back_button {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  width: 7em;
+  height: 3.5em;
 }
 
 /**************** MEDIAQUERY FOR BODY MARGIN ON DESKTOP ***************/
@@ -545,11 +565,16 @@ footer .box_4 img {
 
   #popup article h3 {
     font-size: 1.7rem;
-    margin-bottom: 10px;
   }
 
   #popup article h4 {
     font-size: 1.4rem;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  #popup article h5 {
+    font-size: 1.2rem;
+    margin-top: 20px;
   }
 }
