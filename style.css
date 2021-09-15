@@ -308,6 +308,7 @@ footer .box_4 img {
 .wrapper iframe {
   height: 100%;
   width: 100%;
+  border: solid 2px #9d8fff;
 }
 
 .wrapper .title {
