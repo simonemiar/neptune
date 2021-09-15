@@ -154,6 +154,10 @@ article h5 {
   color: #2a0764;
 }
 
+footer .contact_link {
+  color: #9c8fff;
+}
+
 /************ POP-UP **************/
 #popup {
   display: none;
