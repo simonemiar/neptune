@@ -215,6 +215,10 @@ footer .contact_link {
   cursor: pointer;
 }
 
+#popup article .contact {
+  width: 30%;
+}
+
 /************ FOOTER **************/
 
 footer {
