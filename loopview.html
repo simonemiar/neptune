@@ -77,7 +77,7 @@
 
       <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
       <h1>All vinyls</h1>
-      <h2 id="genre_message">Her er vores pop</h2>
+      <h2 id="genre_message">Here is all our vinyls</h2>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
@@ -153,7 +153,13 @@
         this.classList.add("chosen");
         show();
         header.textContent = this.textContent;
-        genreMessage.textContent = messages.message[0];
+        
+        // HVIS VALGTE KATEGORI ER LIG MED GENRE, KOMMER BESKED FREM
+        messages.forEach(besked=>{
+          if(besked.genre==this.dataset.genre){
+            genreMessage.textContent=besked.message;
+          }
+        })
       }
 
       //ASYNC FUNKTION (asynkron metode henter ændringer uden at opdatere siden)
