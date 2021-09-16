@@ -48,7 +48,7 @@
     <!-- LOGO AND HEADLINE -->
     <header>
       <a href="loopview.html"><img src="images/logo.webp" alt="neptune logo" class="logo"></a>
-    </header>
+    
     
       <div id="burgerBtn">☰</div>
            <nav id="burgerMenu" class="hidden">
@@ -60,6 +60,7 @@
             <button data-genre="Electronic">Electronic</button>
             <button data-genre="Country">Country</button>
            </nav>
+          </header>
     <section></section>
 
     <!-- BUTTONS NAVBAR-->
@@ -75,9 +76,8 @@
         </div>
       </nav>
 
-      <!-- HEADER AND MICROCOPY, POINTING AT THE CHOSEN CATEGORY  -->
+      <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
       <h1>All vinyls</h1>
-      <h2 id="genre_message">Here is all our vinyls</h2>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
@@ -93,10 +93,8 @@
         <p> <b>Released: </b> <span class="released"></span></p>
         <p> <b>Label: </b> <span class="label"></span></p>
         <p> <b>Country of origin: </b> <span class="country"></span></p>
+        <p>Do you have any questions about the product? Contact us <a class="contact_link" href="contact.html">here</a>!</p>
         <h5></h5>
-        <a href="contact.html"><img src="images/contact.svg" class="contact" alt="contact"></a>
-        <!-- <p>Do you have any questions about the product? Contact us <a class="contact_link" href="contact.html">here</a>!</p> -->
-        
       </article>
     </section>
 
@@ -106,16 +104,13 @@
         <img src="" alt="" class="picture" />
         <h3></h3>
         <p><span class="artist"></span></p>
-        <div class="price-placement_loopview">
-          <h5></h5>
-        </div>
+        <h5></h5>
       </article>
     </template>
 
     <script>
       //RESTDB
       const url = "https://neptune-7426.restdb.io/rest/vinyler";
-      const messageUrl = "https://neptune-7426.restdb.io/rest/genre-message";
       const options = {
         headers: {
           "x-apikey": "613b243043cedb6d1f97ef4d",
@@ -124,7 +119,7 @@
 
       //GLOBALE VARIABLER
       document.addEventListener("DOMContentLoaded", start);
-      let vinyls, messages;
+      let vinyls;
       let filter = "all";
       const filterButtons = document.querySelectorAll("nav button");
       // const filterButtonsMobile = document.querySelectorAll("#burgerMenu button")
@@ -153,23 +148,14 @@
         this.classList.add("chosen");
         show();
         header.textContent = this.textContent;
-        
-        // HVIS VALGTE KATEGORI ER LIG MED GENRE, KOMMER BESKED FREM
-        messages.forEach(besked=>{
-          if(besked.genre==this.dataset.genre){
-            genreMessage.textContent=besked.message;
-          }
-        })
       }
 
       //ASYNC FUNKTION (asynkron metode henter ændringer uden at opdatere siden)
       async function getData() {
         const respons = await fetch(url, options);
-        const respons2 = await fetch(messageUrl, options);
         //Her piller vi vores isolerede json data ud
         vinyls = await respons.json();
-        messages = await respons2.json();
-        console.log(messages);
+        console.log(vinyls);
         show();
       }
 
@@ -177,7 +163,6 @@
       const main = document.querySelector("main");
       const template = document.querySelector("template");
       const header = document.querySelector("h1");
-      const genreMessage = document.querySelector("#genre_message");
 
 
       //FUNCTION VIS (med en array med en forEach (loop-syntax))
@@ -227,7 +212,7 @@
   </div>
   <div class="box_2">
     <a href="loopview.html">
-      <img src="images/logo.webp" alt="Logo" />
+      <img src="images/logo.png" alt="Logo" />
     </a>
   </div>
     <div class="box_3">
@@ -238,13 +223,13 @@
   </div>
   <div class="box_4">
     <a href="https://www.facebook.com/">
-    <img src="images/facebook.webp" a href="facebook.com" alt="Facebook">
+    <img src="images/facebook.png" a href="facebook.com" alt="Facebook">
     </a>
     <a href="https://www.discogs.com/">
-    <img src="images/discogo.webp" alt="Discogs">
+    <img src="images/discogo.png" alt="Discogs">
     </a>
     <a href="https://www.instagram.com/">
-    <img src="images/instagram.webp" alt="Instagram" >
+    <img src="images/instagram.png" alt="Instagram" >
     </a>
   </div>
   </footer>
