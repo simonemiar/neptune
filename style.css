@@ -408,7 +408,7 @@ header a {
 .wrapper .form .input_field .textarea {
   width: 100%;
   outline: none;
-  border: 1px solid #2a0764;
+  border: 1px solid black;
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 5px;
@@ -428,7 +428,7 @@ header a {
   font-size: 15px;
   border: 0;
   background: #9c8fff;
-  color: white;
+  color: black;
   cursor: pointer;
   border-radius: 5px;
   outline: none;
