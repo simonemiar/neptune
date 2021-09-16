@@ -131,7 +131,7 @@ article h5 {
   font-size: 1rem;
 }
 
-.price-placement_loopview {
+.price_placement_loopview {
   display: flex;
   flex-direction: row;
   justify-content: right;
