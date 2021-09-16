@@ -252,6 +252,12 @@ footer .contact_link {
   padding: 55px;
 }
 
+.about_us {
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
 /************ FOOTER **************/
 
 footer {
@@ -359,7 +365,6 @@ header a {
 /* CONCTACT */
 .wrapper {
   max-width: 450px;
-  width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   margin: 10px;
   padding: 30px;
@@ -652,5 +657,13 @@ header a {
     justify-content: flex-end;
     flex-direction: row;
     gap: 1em;
+  }
+
+  .wrapper {
+    max-width: 450px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 10px;
+    padding: 30px;
   }
 }
