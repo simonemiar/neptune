@@ -6,6 +6,7 @@
 
 .logo {
   width: auto;
+  height: auto;
   display: block;
   object-fit: cover;
 }
@@ -71,7 +72,7 @@ footer {
 
 body {
   margin: 0 auto;
-  background-image: url(images/new_backroundpng.png);
+  background-image: url(images/new_backround.svg);
   max-width: 1000px;
 }
 
@@ -124,6 +125,10 @@ article:hover {
   background-color: #9e8fff59;
   border: #9d8fff 3px inset;
   color: white;
+}
+
+#popup article:hover {
+  display: none;
 }
 article h3 {
   text-transform: uppercase;
@@ -185,7 +190,7 @@ footer .contact_link {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow: scroll;
+  overflow: none;
 }
 
 #popup article {
@@ -196,7 +201,6 @@ footer .contact_link {
   margin: 6rem auto;
   padding: 30px;
   background-color: #9d8fff;
-  border: 5px solid black;
   border-radius: 5px;
   cursor: default;
   color: black;
@@ -214,11 +218,12 @@ footer .contact_link {
 
 #close {
   position: fixed;
-  padding: 3rem 18rem;
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: black;
   cursor: pointer;
+  margin-top: 7.5rem;
+  margin-left: 18.5rem;
 }
 
 #popup article .contact {
@@ -573,13 +578,12 @@ header a {
 
   #popup article {
     width: 50vw;
-    height: 54vw;
+    height: 50vw;
     display: flex;
     flex-direction: column;
     margin: 6rem auto;
     padding: 30px;
     background-color: #9d8fff;
-    border: 5px solid black;
     border-radius: 5px;
     cursor: default;
     color: black;
@@ -611,5 +615,11 @@ header a {
     width: 25%;
     margin-top: 1rem;
     padding: 0;
+  }
+
+  #close {
+    margin-top: 8rem;
+    margin-left: 64rem;
+}
   }
 }
