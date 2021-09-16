@@ -9,8 +9,7 @@
     <script src="burger.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/ipm3mce.css">
     <link rel="stylesheet" href="https://use.typekit.net/ipm3mce.css">
-<link rel="icon" href="favicon/favicon.svg" />
-
+    <link rel="icon" href="favicon/favicon.svg" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -41,7 +40,6 @@
       content="favicon_neptune/browserconfig.xml"
     />  
     <meta name="theme-color" content="#ffffff" />
-  
   </head>
 
   <body>
@@ -56,6 +54,8 @@
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
       </ul>
+
+    <!-- BURGER MENU -->
     </nav>
            <nav class="burgerMenu" class="hidden">
             <button data-genre="all" class="chosen">All vinyls</button>
@@ -67,7 +67,6 @@
             <button data-genre="Country">Country</button>
            </nav>
     
-           
     <section></section>
 
     <!-- BUTTONS NAVBAR-->
@@ -83,9 +82,9 @@
         </div>
       </nav>
 
-      <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
-      <h1>All vinyls</h1>
-      <h2 id="genre_message">Find your favourites in our broad selection of vinyls!</h2>
+    <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
+    <h1>All vinyls</h1>
+    <h2 id="genre_message">Find your favourites in our broad selection of vinyls!</h2>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
@@ -115,7 +114,6 @@
         <div class="price_placement_loopview">
           <h5></h5>
         </div>
-        
       </article>
     </template>
 
@@ -134,19 +132,13 @@
       let vinyls, messages;
       let filter = "all";
       const filterButtons = document.querySelectorAll("nav button");
-      // const filterButtonsMobile = document.querySelectorAll("#burgerMenu button")
 
       //START FUNKTION (filtrer knapper)
       function start() {
         filterButtons.forEach((button) =>
           button.addEventListener("click", filterVinyls)
         );
-
         console.log(filterButtonsMobile)
-
-        // filterButtonsMobile.forEach((button) =>
-        //   button.addEventListener("click", filterVinyls)
-        // );
         getData();
       }
 
@@ -222,7 +214,6 @@
       }
 
       getData();
-
     </script>
   </body>
 
