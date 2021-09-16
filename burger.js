@@ -7,15 +7,16 @@ function showPage() {
 
 function toggleMenu() {
   console.log("toggleMenu");
-  document.querySelector("#burgerMenu").classList.toggle("hidden");
+  document.querySelector(".burgerMenu").classList.toggle("hidden");
 
   let erSkjult = document
-    .querySelector("#burgerMenu")
+    .querySelector(".burgerMenu")
     .classList.contains("hidden");
 
   if (erSkjult == true) {
     document.querySelector("#burgerBtn").textContent = "☰";
   } else {
-    document.querySelector("#burgerBtn").textContent = "⨉";
+    document.querySelector("#burgerBtn").textContent = "✕";
+
   }
 }
