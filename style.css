@@ -27,6 +27,7 @@ h1 {
   font-size: 2.5rem;
   grid-column: 2/3;
   text-transform: uppercase;
+  margin-top: 2em;
 }
 
 #genre_message {
@@ -85,6 +86,26 @@ header {
   grid-template-columns: 50% 50%; */
 }
 
+.navigation ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 1em;
+}
+
+.navigation ul a {
+  font-family: eurostile, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #e3e3e3;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navigation ul a:hover {
+  color: #9d8fff;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -121,15 +142,15 @@ article img {
   width: 100%;
 }
 
-article:hover {
+.grid:hover {
   background-color: #9e8fff59;
   border: #9d8fff 3px inset;
   color: white;
 }
 
-#popup article:hover {
-  display: none;
-}
+/* #popup article:hover {
+  border: none;
+} */
 article h3 {
   text-transform: uppercase;
 }
@@ -620,6 +641,16 @@ header a {
   #close {
     margin-top: 8rem;
     margin-left: 64rem;
-}
+  }
+
+  .navigation {
+    margin-right: 6em;
+  }
+
+  .navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    gap: 1em;
   }
 }

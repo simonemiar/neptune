@@ -48,9 +48,15 @@
     <!-- LOGO AND HEADLINE -->
     <header>
       <a href="loopview.html"><img src="images/logo.webp" alt="neptune logo" class="logo"></a>
-    
       <div id="burgerBtn">☰</div>
     </header>
+    <nav class="navigation">
+      <ul>
+        <li><a href="loopview.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
            <nav class="burgerMenu" class="hidden">
             <button data-genre="all" class="chosen">All vinyls</button>
             <button data-genre="Pop">Pop</button>
@@ -79,7 +85,7 @@
 
       <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
       <h1>All vinyls</h1>
-      <h2 id="genre_message">Here is all our vinyls</h2>
+      <h2 id="genre_message">Find your favourites in our broad selection of vinyls!</h2>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
@@ -102,7 +108,7 @@
 
     <!-- LOOP VIEW (the grid)-->
     <template>
-      <article>
+      <article class="grid">
         <img src="" alt="" class="picture" />
         <h3></h3>
         <p><span class="artist"></span></p>
