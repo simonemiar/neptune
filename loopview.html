@@ -75,8 +75,9 @@
         </div>
       </nav>
 
-      <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
+      <!-- HEADER AND MICROCOPY, POINTING AT THE CHOSEN CATEGORY  -->
       <h1>All vinyls</h1>
+      <h2 id="genre_message">Here is all our vinyls</h2>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
@@ -92,8 +93,10 @@
         <p> <b>Released: </b> <span class="released"></span></p>
         <p> <b>Label: </b> <span class="label"></span></p>
         <p> <b>Country of origin: </b> <span class="country"></span></p>
-        <p>Do you have any questions about the product? Contact us <a class="contact_link" href="contact.html">here</a>!</p>
         <h5></h5>
+        <a href="contact.html"><img src="images/contact.svg" class="contact" alt="contact"></a>
+        <!-- <p>Do you have any questions about the product? Contact us <a class="contact_link" href="contact.html">here</a>!</p> -->
+        
       </article>
     </section>
 
@@ -112,6 +115,7 @@
     <script>
       //RESTDB
       const url = "https://neptune-7426.restdb.io/rest/vinyler";
+      const messageUrl = "https://neptune-7426.restdb.io/rest/genre-message";
       const options = {
         headers: {
           "x-apikey": "613b243043cedb6d1f97ef4d",
@@ -120,7 +124,7 @@
 
       //GLOBALE VARIABLER
       document.addEventListener("DOMContentLoaded", start);
-      let vinyls;
+      let vinyls, messages;
       let filter = "all";
       const filterButtons = document.querySelectorAll("nav button");
       // const filterButtonsMobile = document.querySelectorAll("#burgerMenu button")
@@ -149,14 +153,23 @@
         this.classList.add("chosen");
         show();
         header.textContent = this.textContent;
+        
+        // HVIS VALGTE KATEGORI ER LIG MED GENRE, KOMMER BESKED FREM
+        messages.forEach(besked=>{
+          if(besked.genre==this.dataset.genre){
+            genreMessage.textContent=besked.message;
+          }
+        })
       }
 
       //ASYNC FUNKTION (asynkron metode henter ændringer uden at opdatere siden)
       async function getData() {
         const respons = await fetch(url, options);
+        const respons2 = await fetch(messageUrl, options);
         //Her piller vi vores isolerede json data ud
         vinyls = await respons.json();
-        console.log(vinyls);
+        messages = await respons2.json();
+        console.log(messages);
         show();
       }
 
@@ -164,6 +177,7 @@
       const main = document.querySelector("main");
       const template = document.querySelector("template");
       const header = document.querySelector("h1");
+      const genreMessage = document.querySelector("#genre_message");
 
 
       //FUNCTION VIS (med en array med en forEach (loop-syntax))
