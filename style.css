@@ -78,6 +78,8 @@ body {
 header {
   display: flex;
   width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
   /* display: grid;
   grid-template-columns: 50% 50%; */
 }
@@ -90,7 +92,6 @@ main {
   margin-bottom: 50px;
   justify-content: center;
 }
-
 
 button {
   font-family: eurostile, sans-serif;
@@ -297,14 +298,12 @@ header a {
   font-style: normal;
   cursor: pointer;
   font-size: 3em;
- 
+
   /* background-image: url("../images/burgerboy.svg"); */
   background-repeat: no-repeat;
   height: 1.2em;
   width: 1.2em;
 }
-
-
 
 .burgerMenu {
   display: grid;
