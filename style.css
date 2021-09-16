@@ -22,7 +22,6 @@ h1 {
   font-family: eurostile-extended, sans-serif;
   font-weight: 400;
   font-style: normal;
-  /* margin-top: 1rem; */
   margin-bottom: 1rem;
   color: #e3e3e3;
   font-size: 2.5rem;
@@ -84,8 +83,6 @@ header {
   width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  /* display: grid;
-  grid-template-columns: 50% 50%; */
 }
 
 .navigation ul {
@@ -175,16 +172,6 @@ article h5 {
 
 #desktop_nav {
   display: none;
-  /* grid-column: 2/3;
-  display: flex;
-  justify-content: center;
-  grid-gap: 25px;
-  margin-top: 50px;
-  overflow-x: auto;
-  flex-wrap: wrap;
-  /* position: -webkit-sticky; Safari */
-  /* position: sticky; */
-  /* top: 0; */
 }
 
 #desktop_nav.hidden {
@@ -250,7 +237,6 @@ footer .contact_link {
 }
 
 #popup article .contact {
-  /* width: 50%; */
   padding: 55px;
 }
 
@@ -265,7 +251,6 @@ footer .contact_link {
 footer {
   display: grid;
   grid-column: 1/4;
-  /* grid-template-columns: 1fr 1fr; */
   grid-template-rows: 1fr 1fr 1fr;
   margin-top: 10rem;
   padding-top: 2rem;
@@ -332,7 +317,6 @@ header a {
   font-style: normal;
   cursor: pointer;
   font-size: 3em;
-
   /* background-image: url("../images/burgerboy.svg"); */
   background-repeat: no-repeat;
   height: 1.2em;
