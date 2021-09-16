@@ -294,8 +294,8 @@ footer .box_4 img {
   cursor: pointer;
   font-size: 3.5em;
   position: fixed;
-  top: 0.5em;
-  left: 6em;
+  top: 0.75em;
+  left: 5em;
   background-image: url("../images/burgerboy.svg");
   background-repeat: no-repeat;
   height: 1.2em;
