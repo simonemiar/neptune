@@ -603,7 +603,8 @@ footer .box_4 img {
   }
 
   #popup article .contact {
-    width: 30%;
+    width: 25%;
     margin-top: 1rem;
+    padding: 0;
   }
 }
