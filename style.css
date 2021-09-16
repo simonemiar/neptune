@@ -297,7 +297,7 @@ footer .box_4 img {
   position: fixed;
   top: 0.75em;
   left: 5em;
-  background-image: url("../images/burgerboy.svg");
+  /* background-image: url("../images/burgerboy.svg"); */
   background-repeat: no-repeat;
   height: 1.2em;
   width: 1.2em;
