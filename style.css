@@ -93,6 +93,7 @@ main {
   justify-content: center;
 }
 
+
 button {
   font-family: eurostile, sans-serif;
   font-weight: 400;
@@ -214,7 +215,7 @@ footer .contact_link {
 
 #close {
   position: fixed;
-  padding: 2rem;
+  padding: 3rem 18rem;
   font-size: 2rem;
   font-weight: bold;
   color: white;
