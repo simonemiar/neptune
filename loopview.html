@@ -77,6 +77,7 @@
 
       <!-- HEADER, POINTING AT THE CHOSEN CATEGORY  -->
       <h1>All vinyls</h1>
+      <h2 id="genre_message">Her er vores pop</h2>
 
     <!-- TOMT MAIN TAG (will be populated later by the template tag) -->
     <main></main>
@@ -112,6 +113,7 @@
     <script>
       //RESTDB
       const url = "https://neptune-7426.restdb.io/rest/vinyler";
+      const messageUrl = "https://neptune-7426.restdb.io/rest/genre-message";
       const options = {
         headers: {
           "x-apikey": "613b243043cedb6d1f97ef4d",
@@ -120,7 +122,7 @@
 
       //GLOBALE VARIABLER
       document.addEventListener("DOMContentLoaded", start);
-      let vinyls;
+      let vinyls, messages;
       let filter = "all";
       const filterButtons = document.querySelectorAll("nav button");
       // const filterButtonsMobile = document.querySelectorAll("#burgerMenu button")
@@ -149,14 +151,17 @@
         this.classList.add("chosen");
         show();
         header.textContent = this.textContent;
+        genreMessage.textContent = messages.message[0];
       }
 
       //ASYNC FUNKTION (asynkron metode henter ændringer uden at opdatere siden)
       async function getData() {
         const respons = await fetch(url, options);
+        const respons2 = await fetch(messageUrl, options);
         //Her piller vi vores isolerede json data ud
         vinyls = await respons.json();
-        console.log(vinyls);
+        messages = await respons2.json();
+        console.log(messages);
         show();
       }
 
@@ -164,6 +169,7 @@
       const main = document.querySelector("main");
       const template = document.querySelector("template");
       const header = document.querySelector("h1");
+      const genreMessage = document.querySelector("#genre_message");
 
 
       //FUNCTION VIS (med en array med en forEach (loop-syntax))
