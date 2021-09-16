@@ -222,7 +222,8 @@ footer .contact_link {
 }
 
 #popup article .contact {
-  width: 50%;
+  /* width: 50%; */
+  padding: 55px;
 }
 
 /************ FOOTER **************/
